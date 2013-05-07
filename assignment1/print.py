@@ -1,5 +1,6 @@
 import urllib
 import json
+import sys
 
 def print_tweets(keyword, nr_pages):
 	for i in range(1, nr_pages + 1):
@@ -8,6 +9,7 @@ def print_tweets(keyword, nr_pages):
 		results = json.load(response)['results']
 		for x in results:
 			print x['text']
+			print ''
 		# print json.dumps(json.load(response), sort_keys=True, indent=4, separators=(',', ': '))
 
-print_tweets("aiww", 10)
+print_tweets(sys.argv[1], 1)
