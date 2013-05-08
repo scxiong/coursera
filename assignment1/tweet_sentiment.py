@@ -10,7 +10,6 @@ def lines(fp):
 def main():
     sent_file = open(sys.argv[1])
     tweet_file = open(sys.argv[2])
-    sent_file = open("AFINN-111.txt")
     scores = {} # initialize an empty dictionary
 
     for line in sent_file:
@@ -20,10 +19,10 @@ def main():
     for line in tweet_file:
         t = json.loads(line)
         if t.get('text'):
-                sentiment = 0
+                sentiment = 0.0
                 for word in t['text'].split():
                     sentiment += scores.get(word, 0)
-                print t['text']
+                # print t['text']
                 print sentiment
 
 if __name__ == '__main__':
