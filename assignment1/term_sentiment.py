@@ -40,7 +40,7 @@ def main():
                 			terms[word] = [tentative, 1]   
 
     for term in terms.keys():
-    	print term + ' ' + str(terms[term][0])
+    	print term, terms[term][0]
 
 if __name__ == '__main__':
     main()
