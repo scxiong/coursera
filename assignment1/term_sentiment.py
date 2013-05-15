@@ -40,7 +40,7 @@ def main():
                 			terms[word] = [tentative, 1]   
 
     for term in terms.keys():
-    	print term, terms[term][0]
+    	print term.encode('utf-8'), terms[term][0]
 
 if __name__ == '__main__':
     main()

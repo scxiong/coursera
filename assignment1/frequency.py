@@ -24,7 +24,7 @@ def main():
     freq = term_frequency(words_list)
 
     for key in freq.keys():
-    	print key, freq[key]
+    	print key.encode('utf-8'), freq[key]
 
 if __name__ == '__main__':
     main()
